@@ -29,12 +29,15 @@ function Login() {
   return (
     loading ? (<Carregando />) : (
       <div>
+        <p>TrybeTunes</p>
+        Nome:
         <input
           type="text"
           data-testid="login-name-input"
           value={ name }
           onChange={ (event) => setname(event.target.value) }
         />
+
         <button
           data-testid="login-submit-button"
           disabled={ validador === false }
