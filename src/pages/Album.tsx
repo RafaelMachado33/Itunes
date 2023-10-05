@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import getMusics from '../services/musicsAPI';
 import Carregando from '../componetes/Carregando';
+import MusicCard from './MusicCard';
 
 function Album() {
   const { id } = useParams<{ id: string }>();
@@ -22,23 +23,16 @@ function Album() {
   if (loading) {
     return <Carregando />;
   }
-  /*
-  { musica.map((music) => (
-
-    <li key={ music.collectionId }>
-      <h2 data-testid="artist-name">
-        Nome do artista:
-        {' '}
-        {music.artistName}
-      </h2>
-      <h2 data-testid="album-name">
-        Coleção álbum:
-        {' '}
-        {music.collectionName}
-      </h2>
-    </li>
-  ))}
-*/
+  /* {musica.slice(1).map(({ collectionId, trackName }, index) => (
+    <h2 key={ collectionId }>
+      Musica
+      {' '}
+      {index + 1}
+      :
+      {' '}
+      {trackName || 'Nome da Música Desconhecido'}
+    </h2>
+  ))} */
   // musica.shift();
   return (
     <>
@@ -59,17 +53,7 @@ function Album() {
           </h1>
         </li>
       </ul>
-
-      {musica.slice(1).map(({ collectionId, trackName }, index) => (
-        <h2 key={ collectionId }>
-          Musica
-          {' '}
-          {index + 1}
-          :
-          {' '}
-          {trackName || 'Nome da Música Desconhecido'}
-        </h2>
-      ))}
+      <MusicCard data={ musica } />
     </>
   );
 }
