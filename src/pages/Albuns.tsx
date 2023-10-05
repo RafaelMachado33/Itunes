@@ -1,6 +1,4 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { AlbumType, SongType } from '../types';
 
 type Data =
  [ {
@@ -14,7 +12,7 @@ type Data =
    trackCount: 8,
  } ];
 
-function Album({ data }:Data) {
+function Albuns({ data }:Data) {
   // const [loading, setLoading] = useState(false);
   /* Em vez do music no map, poderia colocar a desestruturação
  com as propriedades necessarias. Como no exempo abaixo poderia substituir o
@@ -29,7 +27,13 @@ function Album({ data }:Data) {
             {music.collectionName}
             {' '}
           </h2>
-          <Link to="/album/:id">Link</Link>
+          <Link
+            to={ `/album/${music.collectionId}` }
+            data-testid={ `link-to-album-${music.collectionId}` }
+          >
+            Link
+
+          </Link>
 
         </li>
       ))}
@@ -38,6 +42,6 @@ function Album({ data }:Data) {
   );
 }
 
-export default Album;
+export default Albuns;
 
 // <Album data={ artista } />

@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
 import Carregando from '../componetes/Carregando';
-import { AlbumType, SongType } from '../types';
-import Album from './Album';
+import Albuns from './Albuns';
 
 function Search() {
   const [name, setname] = useState('');
@@ -58,7 +57,7 @@ function Search() {
               {name2}
             </p>
             {music.length >= 1
-              ? <Album data={ music } /> : <p>Nenhum álbum foi encontrado</p>}
+              ? <Albuns data={ music } /> : <p>Nenhum álbum foi encontrado</p>}
           </>
         ) : ''}
 
