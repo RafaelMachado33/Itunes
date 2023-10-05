@@ -16,7 +16,7 @@ function Album() {
       setLoading(false);
     }
     assincrona();
-  }, []);
+  });
 
   console.log(musica);
 
