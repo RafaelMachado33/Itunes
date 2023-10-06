@@ -5,17 +5,22 @@ import Carregando from './Carregando';
 
 function Header() {
   const [loading, setLoading] = useState(true);
-  const [data, setData] = useState();
+  const [data, setData] = useState({
+    name: ' ',
+    email: ' ',
+    image: ' ',
+    description: ' ',
+  });
 
   useEffect(() => {
     async function assincrona() {
       const resposta = await getUser();
-      setLoading(false);
       setData(resposta);
-      console.log(data.name);
+      setLoading(false);
+      // console.log(data.name);
     }
     assincrona();
-  });
+  }, []);
 
   if (loading) {
     return <Carregando />;

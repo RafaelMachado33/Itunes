@@ -4,18 +4,18 @@ import Search from './pages/Search';
 import NotFound from './pages/NotFound';
 import Album from './pages/Album';
 import Header from './componetes/Header';
+import Layout from './componetes/Layout';
 
 function App() {
   return (
-    <>
-      <Header />
-      <Routes>
-        <Route path="/" element={ <Login /> } />
+    <Routes>
+      <Route path="/" element={ <Login /> } />
+      <Route path="/" element={ <Layout /> }>
         <Route path="/search" element={ <Search /> } />
         <Route path="/album/:id" element={ <Album /> } />
-        <Route path="/*" element={ <NotFound /> } />
-      </Routes>
-    </>
+      </Route>
+      <Route path="/*" element={ <NotFound /> } />
+    </Routes>
 
   );
 }
