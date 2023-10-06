@@ -6,11 +6,13 @@ type Data = {
   collectionId:string,
   trackName:string,
   previewUrl:string,
+  trackId:string
 }[];
 
 function MusicCard({ data }:Data) {
   const [checked, setChecked] = useState(false);
 
+  console.log(data);
   function handleClick() {
     if (checked) {
       setChecked(false);
@@ -20,30 +22,25 @@ function MusicCard({ data }:Data) {
   }
   return (
     <>
-      {data.slice(1).map(({ collectionId, trackName, previewUrl, trackId }) => (
-        <>
-          <h2 key={ collectionId }>
-            {trackName || 'Nome da Música Desconhecido'}
-          </h2>
-          <audio data-testid="audio-component" src={ previewUrl } controls>
-            <track kind="captions" />
-            O seu navegador não suporta o elemento
-            {' '}
-            {' '}
-            <code>audio</code>
-          </audio>
-          <label htmlFor={ trackId }>
-            <input
-              id={ trackId }
-              type="checkbox"
-              data-testid={ `checkbox-music-${trackId}` }
-              onClick={ (event) => handleClick(event) }
-            />
-            {checked ? <img src={ checkHeard } alt="favorite" />
-              : <img src={ checkEmptyHeard } alt="favorite" />}
-          </label>
-        </>
-      ))}
+      <h2 key={ data.collectionId }>
+        {data.trackName || 'Nome da Música Desconhecido'}
+      </h2>
+      <audio data-testid="audio-component" src={ data.previewUrl } controls>
+        <track kind="captions" />
+        O seu navegador não suporta o elemento
+        {' '}
+        {' '}
+        <code>audio</code>
+      </audio>
+      <label htmlFor={ data.trackId } data-testid={ `checkbox-music-${data.trackId}` }>
+        <input
+          id={ data.trackId }
+          type="checkbox"
+          onClick={ (event) => handleClick(event) }
+        />
+        {checked ? <img src={ checkHeard } alt="favorite" />
+          : <img src={ checkEmptyHeard } alt="favorite" />}
+      </label>
     </>
   );
 }

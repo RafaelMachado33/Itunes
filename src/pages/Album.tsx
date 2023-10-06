@@ -34,6 +34,7 @@ function Album() {
     </h2>
   ))} */
   // musica.shift();
+  console.log(musica);
   return (
     <>
 
@@ -53,7 +54,10 @@ function Album() {
           </h1>
         </li>
       </ul>
-      <MusicCard data={ musica } />
+      {musica.slice(1).map((music) => (
+        <MusicCard data={ music } key={ music.trackId } />
+      ))}
+
     </>
   );
 }
