@@ -1,3 +1,7 @@
+import { useState } from 'react';
+import checkHeard from '../images/checked_heart.png';
+import checkEmptyHeard from '../images/empty_heart.png';
+
 type Data = {
   collectionId:string,
   trackName:string,
@@ -5,10 +9,18 @@ type Data = {
 }[];
 
 function MusicCard({ data }:Data) {
-  console.log(data[1]);
+  const [checked, setChecked] = useState(false);
+
+  function handleClick() {
+    if (checked) {
+      setChecked(false);
+    } else {
+      setChecked(true);
+    }
+  }
   return (
     <>
-      {data.slice(1).map(({ collectionId, trackName, previewUrl }) => (
+      {data.slice(1).map(({ collectionId, trackName, previewUrl, trackId }) => (
         <>
           <h2 key={ collectionId }>
             {trackName || 'Nome da Música Desconhecido'}
@@ -19,8 +31,17 @@ function MusicCard({ data }:Data) {
             {' '}
             {' '}
             <code>audio</code>
-            .
           </audio>
+          <label htmlFor={ trackId }>
+            <input
+              id={ trackId }
+              type="checkbox"
+              data-testid={ `checkbox-music-${trackId}` }
+              onClick={ (event) => handleClick(event) }
+            />
+            {checked ? <img src={ checkHeard } alt="favorite" />
+              : <img src={ checkEmptyHeard } alt="favorite" />}
+          </label>
         </>
       ))}
     </>
