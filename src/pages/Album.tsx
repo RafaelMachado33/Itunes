@@ -16,9 +16,9 @@ function Album() {
       setLoading(false);
     }
     assincrona();
-  });
+  }, []);
 
-  console.log(musica);
+  // console.log(musica);
 
   if (loading) {
     return <Carregando />;
