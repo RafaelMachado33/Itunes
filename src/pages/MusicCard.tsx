@@ -36,7 +36,7 @@ function MusicCard({ data }:Data) {
         <input
           id={ data.trackId }
           type="checkbox"
-          onClick={ (event) => handleClick(event) }
+          onClick={ () => handleClick() }
         />
         {checked ? <img src={ checkHeard } alt="favorite" />
           : <img src={ checkEmptyHeard } alt="favorite" />}
