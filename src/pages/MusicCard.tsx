@@ -1,25 +1,31 @@
 import { useState } from 'react';
 import checkHeard from '../images/checked_heart.png';
 import checkEmptyHeard from '../images/empty_heart.png';
+import { addSong, removeSong } from '../services/favoriteSongsAPI';
 
-type Data = {
-  collectionId:string,
-  trackName:string,
-  previewUrl:string,
-  trackId:string
-}[];
+type PropsData = {
+  data:{
+    collectionId:string,
+    trackName:string,
+    previewUrl:string,
+    trackId:number,
+  }
+};
 
-function MusicCard({ data }:Data) {
+function MusicCard({ data }:PropsData) {
   const [checked, setChecked] = useState(false);
-
   console.log(data);
+
   function handleClick() {
     if (checked) {
       setChecked(false);
+      removeSong(data);
     } else {
       setChecked(true);
+      addSong(data);
     }
   }
+
   return (
     <>
       <h2 key={ data.collectionId }>
