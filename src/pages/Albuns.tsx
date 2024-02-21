@@ -18,22 +18,25 @@ function Albuns({ data }:Data) {
  com as propriedades necessarias. Como no exempo abaixo poderia substituir o
   music por {collectionId,collectionName} */
 
-  console.log(data[0]);
   return (
-    <ul>
+    <ul id="albuns">
       {data.map((music) => (
-        <li key={ music.collectionId }>
-          <h2>
-            {music.collectionName}
-            {' '}
-          </h2>
+
+        <li key={ music.collectionId } id="boxMusic">
           <Link
             to={ `/album/${music.collectionId}` }
             data-testid={ `link-to-album-${music.collectionId}` }
           >
-            Link
-
+            <img src={ music.artworkUrl100 } id="pictureAlbum" alt="imagem" />
           </Link>
+          <h2>
+            {music.collectionName}
+            {' '}
+          </h2>
+          <h3>
+            {music.artistName}
+            {' '}
+          </h3>
 
         </li>
       ))}

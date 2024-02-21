@@ -5,10 +5,12 @@ import NotFound from './pages/NotFound';
 import Album from './pages/Album';
 import Header from './componetes/Header';
 import Layout from './componetes/Layout';
+import Favoritas from './pages/Favoritas';
 
 function App() {
   return (
     <Routes>
+      <Route path="/favorites" element={ <Favoritas /> } />
       <Route path="/" element={ <Login /> } />
       <Route path="/" element={ <Layout /> }>
         <Route path="/search" element={ <Search /> } />

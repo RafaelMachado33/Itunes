@@ -26,18 +26,21 @@ function Search() {
     setLoading(false);
     // setdata(artista);
     // console.log(artista[0].artistName);
+    // console.log(artista);
   }
   // console.log(music);
   if (loading) {
     return <Carregando />;
   }
   return (
-    <>
-      <form>
+    <div className="musics">
+      <form id="form_top_part">
+
         <input
           type="text"
           data-testid="search-artist-input"
           value={ name }
+          placeholder="DIGITE A SUA PESQUISA"
           onChange={ (event) => setname(event.target.value) }
         />
         <button
@@ -47,6 +50,7 @@ function Search() {
         >
           Pesquisar
         </button>
+
       </form>
       {name2
         ? (
@@ -56,12 +60,13 @@ function Search() {
               {' '}
               {name2}
             </p>
+
             {music.length >= 1
               ? <Albuns data={ music } /> : <p>Nenhum álbum foi encontrado</p>}
+
           </>
         ) : ''}
-
-    </>
+    </div>
 
   );
 }

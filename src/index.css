@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 code {
@@ -16,4 +17,348 @@ code {
   align-items: center;
   display: flex;
   justify-content: center;
+}
+/* ===== LOGIN  ===== */
+#login-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 750px;
+  min-width: 310px;
+  width: 50%;
+  height: 450px;
+  border-radius: 20px;
+  background-color: white;
+  margin:  10% auto ;
+}
+
+#login-box p{
+visibility: hidden;
+}
+
+#backGround{
+  background-image: url("./images/pexels-stas-knop-3552948.jpg");
+  background-size: cover; 
+  background-repeat: no-repeat;  
+  height: 100vh;
+  display:flex
+}
+
+#login-box #imagemTrybeTunes{
+  margin-top: 90px;
+}
+
+#login-box input{
+  outline: none;
+  width: 80%;
+  height: 30px;
+  border-radius: 100px;
+  border: 1px solid #003BE5;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+#login-box input::placeholder{
+text-align: center;
+color:#003BE5 ;
+}
+#login-box input:focus::placeholder{
+  color:transparent ;
+  }
+
+  
+
+#login-box button{
+  width: 81%;
+  height: 32px;
+  border-radius: 100px;
+  border: 1px solid #003BE5;
+  text-align: center;
+  color:white ;
+  background-color:#003BE5  ;
+  font-family:'Courier New', Courier, monospace;
+  font-weight: bold;
+  }
+
+#login-box button:hover{
+  cursor: pointer;
+  scale: 1.2;
+  }
+
+/* ================ Pesquisa ===================*/
+
+/* ===== Lateral esquerda ===== */
+.body-search{
+  display: flex;
+  
+}
+
+.header-component{
+  width: 280px;
+  height: 100vh;
+}
+
+
+.header-component #link1 ,#link2, #link3{
+  text-decoration: none;
+  color:#444955;
+  width: 20px;
+   
+}
+#link1 img,#link2 img, #link3 img{
+  width: 22px;
+  margin: 25% 20px 0px 20%;
+}
+
+ #link1:hover{
+color: black;
+font-weight: bold;
+
+}
+#link2:hover{
+  color: black;
+  font-weight: bold;
+
+}
+#link3:hover {
+  color: black;
+  font-weight: bold;
+  
+}
+
+.header-component #imagemTrybeTunes{
+margin-top: 35px;
+margin-left: 35px;
+margin-right: 35px;
+width: 170px;
+margin-bottom: 60%;
+}
+.header-component h3 {
+margin-top:240%;
+margin-left: 50px;
+}
+/* ===== Parte superior ===== */
+.musics{
+  width:100%;
+  background-color:#EFF3F9 ;
+}
+#form_top_part{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  height: 220px;
+  width: 100%;
+  background-color:blue ;
+  /* Não consigo usar ---->>background-image: url("./images/pexels-stas-knop-3552948.jpg");*/
+  background-size: cover; 
+  background-repeat: no-repeat;
+}
+
+
+#form_top_part input{
+outline: none;
+border-radius: 23px;
+min-width: 200px;
+margin-left: 50px;
+width: 28%;
+height: 30px;
+margin-right: 20px;
+background-color:rgba(255, 255, 255, 0.5);
+border-color: rgba(255, 255, 255, 0.5);
+text-align: center;
+font-weight: bold;
+
+}
+
+#form_top_part input::placeholder{
+ color:white;
+ text-align: center;
+ font-weight: bold;
+ }
+ #form_top_part input:focus::placeholder{
+  color:transparent;
+  border-color: transparent;
+  }
+#form_top_part button{
+  border-radius: 23px;
+  width: 100px;
+  height: 37px;
+  margin-top: 1.25px;
+  margin-right: 20px;
+  background-color: rgba(0, 213, 226, 1);
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  }
+#form_top_part button:hover{
+    transform: scale(1.1);
+}
+
+/* ===== Resultado pesquisa musicas ===== */
+
+.musics p {
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 40px;
+  margin-bottom: 50px;
+ 
+}
+ul{
+  list-style-type: none;
+}
+#pictureAlbum{
+  border-radius:10px ;
+  width: 200px;
+  height: 200px;
+box-shadow: 4px 4px 4px 2px black;
+}
+
+
+#albuns{
+  display: grid;
+  grid-template-columns: repeat(5, 270px);
+  justify-content: center;
+  margin-left: 40px;
+
+}
+#boxMusic{
+  width: 200px;
+  height: 350px;
+  margin-bottom: 50px;
+ /* border: 1px solid black;
+  border-radius: 10px;*/
+}
+
+#boxMusic:hover{
+  transform: scale(1.1);
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+ /**/ #pictureAlbum{
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
+  }
+}
+
+#boxMusic:active{
+  transform: scale(1.05);
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+
+@media screen and (max-width:1530px){
+  #albuns{
+    display: grid;
+    grid-template-columns: repeat(4, 270px );
+    justify-content: center;
+    margin-left: 40px;
+  }
+}
+@media screen and (max-width:1300px){
+  #albuns{
+    display: grid;
+    grid-template-columns: repeat(3, 270px);
+    justify-content: center;
+    margin-left: 40px;
+  }
+}
+
+@media screen and (max-width:1056px){
+  #albuns{
+    display: grid;
+    grid-template-columns: repeat(2, 270px);
+    justify-content: center;
+    margin-left: 40px;
+  }
+}
+@media screen and (max-width:790px){
+  #albuns{
+    display: grid;
+    grid-template-columns: repeat(1, 270px);
+    justify-content: center;
+    margin-left: 40px;
+  }
+}
+/* ================ Musicas do album===================*/
+
+.musicBody{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #EFF3F9;
+}
+
+
+.musicas {
+  height: 220px;
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: blue;
+  color: white;
+  margin-left: ;
+
+}
+.musicas h1,.musicas h2{
+  margin-left: 120px;
+  margin-top: 20px;
+}
+.musicas h1{
+ 
+  margin-top: 50px;
+}
+
+#onlyMusic{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+#onlyMusic div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#boxForCentrilizeMusic{
+  width: 700px;
+  margin-left: 200px;
+  
+ 
+}
+
+#onlyMusic div input{
+display: none;
+}
+#onlyMusic h2{
+ 
+  font-weight:400;
+  font-size:larger;
+  
+  }
+  
+
+#onlyMusic audio::-webkit-media-controls-panel {
+  background-color: white; 
+}
+
+#onlyMusic div img{
+  margin-left: 35px;
+}
+
+.line{
+  background-color: #CCD4E1;
+  width: 95%;
+  height: 0.85px;
+  border-radius: 0.85px;
+  margin-left:-20px;
+}
+
+.musicas img {
+  position: absolute;
+  top:110px;
+  left:320px;
 }
