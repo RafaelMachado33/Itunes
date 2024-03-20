@@ -38,7 +38,7 @@ code {
 }
 
 #backGround {
-  background-image: url("./images/pexels-stas-knop-3552948.jpg");
+  background-image: url("/images/pexels-stas-knop-3552948.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
@@ -266,139 +266,6 @@ ul {
 
 
 
-@media screen and (max-width:1530px) {
-  #albuns {
-    display: grid;
-    grid-template-columns: repeat(4, 270px);
-    justify-content: center;
-    margin-left: 40px;
-  }
-}
-
-@media screen and (max-width:1300px) {
-  #albuns {
-    display: grid;
-    grid-template-columns: repeat(3, 270px);
-    justify-content: center;
-    margin-left: 40px;
-  }
-}
-
-@media screen and (max-width:1056px) {
-  #albuns {
-    display: grid;
-    grid-template-columns: repeat(2, 270px);
-    justify-content: center;
-    margin-left: 40px;
-  }
-}
-
-@media screen and (max-width:790px) {
-  #albuns {
-    display: grid;
-    grid-template-columns: repeat(1, 270px);
-    justify-content: center;
-    margin-left: 40px;
-  }
-}
-
-@media screen and (max-width:400px) {
-  .header-component {
-    width: 80px;
-
-  }
-
-  .header-component #imagemTrybeTunes {
-    margin-top: 20px;
-    margin-left: 10px;
-    margin-right: 20px;
-    width: 55px;
-    margin-bottom: 60%;
-    display: flex;
-  }
-
-  #form_top_part {
-    height: 75px;
-  }
-
-  .header-component a {
-    margin-left: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 30px;
-    font-size: 14px;
-
-  }
-
-  .header-component h3 {
-    margin-top: 240%;
-    margin-left: 7px;
-    font-size: 14px;
-   
-  }
-
-  #form_top_part input {
-    margin-left: 12px;
-    height: 25px;
-    margin-right: 5px;
-    font-size: 12px;
-  }
-  .musics p {
-    margin-left: -5px;
-    text-align: center;
-    font-style: italic;
-    font-weight: bold;
-    font-size: 20px;
-    margin-bottom: 15px;
-    margin-top: 10px;
-    width: 350px;
-  }
-
-  #boxMusic{
-    margin-left: -35px;
-    margin-bottom: 10px;
-    height: 175px;
-    width: 135px;
-    
-  }
-  #albuns{
-    display: grid;
-    grid-template-columns: repeat(2, 170px);
-    justify-content: center;
-    margin-left: 65px;
-  }
-  #boxMusic img{
-   height:120px;
-    width:120px
-  }
-  #boxMusic h3{
-    display:none;
-  }
-  #boxMusic h2{
-   font-size: 15px;
-  }
-  .musicas {
-    height: 20px;
-  }
-  
-  .musicas li {
-    width: 350px; 
-    margin-left: -250px;
-    height: 30px;
-  }
-  
-  .musicas h1 {
-    font-size: 17px;
-    height: 20px;
-  
-  }
-  
-  .musicas h2 {
-    font-size: 15px;
-  }
-
-}
 
 /* ================ Musicas do album===================*/
 
@@ -438,7 +305,7 @@ ul {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin: 20px;
+  margin: 15px;
 }
 
 #onlyMusic div {
@@ -486,4 +353,189 @@ ul {
   position: absolute;
   top: 110px;
   left: 320px;
+}
+
+/* ================ Query===================*/
+@media screen and (max-width:1530px) {
+  #albuns {
+    display: grid;
+    grid-template-columns: repeat(4, 270px);
+    justify-content: center;
+    margin-left: 40px;
+  }
+}
+
+@media screen and (max-width:1300px) {
+  #albuns {
+    display: grid;
+    grid-template-columns: repeat(3, 270px);
+    justify-content: center;
+    margin-left: 40px;
+  }
+
+  #boxForCentrilizeMusic {
+    width: 600px;
+    margin-left: 50px;
+  }
+
+  #onlyMusic {
+    flex-direction: column;
+  }
+
+  #pictureAlbum {
+    margin-left: -50px;
+    border-radius: 5px;
+    width: 150px;
+    height: 150px;
+    box-shadow: 4px 4px 4px 2px black;
+  }
+
+}
+
+@media screen and (max-width:1056px) {
+  #albuns {
+    display: grid;
+    grid-template-columns: repeat(2, 270px);
+    justify-content: center;
+    margin-left: 40px;
+  }
+}
+
+@media screen and (max-width:790px) {
+  #albuns {
+    display: grid;
+    grid-template-columns: repeat(1, 270px);
+    justify-content: center;
+    margin-left: 40px;
+  }
+}
+
+@media screen and (max-width:400px) {
+  .musicBody {
+    width: 540px;
+
+  }
+
+  .line {
+    background-color: #CCD4E1;
+    width: 65%;
+    height: 0.85px;
+    border-radius: 0.85px;
+    margin-left: 60px;
+  }
+
+  #form_top_part {
+    height: 100px;
+  }
+
+  .header-component #imagemTrybeTunes {
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 20px;
+    width: 55px;
+    margin-bottom: 60%;
+    display: flex;
+  }
+
+  #boxForCentrilizeMusic {
+    margin-top: 100px;
+  }
+
+
+  .header-component a {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    font-size: 14px;
+
+  }
+
+  .header-component h3 {
+    margin-top: 240%;
+    margin-left: 7px;
+    font-size: 14px;
+
+  }
+
+  #form_top_part input {
+    margin-left: 12px;
+    height: 25px;
+    margin-right: 5px;
+    font-size: 12px;
+  }
+
+  .musics p {
+    margin-left: -5px;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    width: 350px;
+  }
+
+  #boxMusic {
+    margin-left: -35px;
+    margin-bottom: 10px;
+    height: 175px;
+    width: 135px;
+
+  }
+
+  #pictureAlbum {
+    border-radius: 10px;
+    width: 120px;
+    height: 120px;
+    box-shadow: 4px 4px 4px 2px black;
+    margin-left: -15px;
+  }
+
+  #albuns {
+    display: grid;
+    grid-template-columns: repeat(2, 170px);
+    justify-content: center;
+    margin-left: 65px;
+  }
+
+  #onlyMusic {
+    margin-left: -75px;
+    margin-top: -5px;
+  }
+
+  #boxMusic img {
+    height: 120px;
+    width: 120px
+  }
+
+  #boxMusic h3 {
+    display: none;
+  }
+
+  #boxMusic h2 {
+    font-size: 15px;
+  }
+
+  .musicas {
+    height: 20px;
+  }
+
+  .musicas li {
+    width: 350px;
+    margin-left: -250px;
+    height: 30px;
+  }
+
+  .musicas h1 {
+    font-size: 17px;
+    height: 20px;
+
+  }
+
+  .musicas h2 {
+    font-size: 15px;
+  }
+
 }
